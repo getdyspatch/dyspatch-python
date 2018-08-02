@@ -3,7 +3,13 @@
 """
     Dyspatch API
 
-    # Introduction  The Dyspatch API is based on the REST paradigm, and features resource based URLs with standard HTTP response codes to indicate errors. We use standard HTTP authentication and request verbs, and all responses are JSON formatted. See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/) for more details on how to implement Dyspatch.   # noqa: E501
+    # Introduction
+
+    The Dyspatch API is based on the REST paradigm, and features resource
+    based URLs with standard HTTP response codes to indicate errors. We use
+    standard HTTP authentication and request verbs, and all responses are JSON formatted.
+    See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/)
+    for more details on how to implement Dyspatch.
 
     OpenAPI spec version: 2018.02
     Contact: support@dyspatch.io
@@ -13,7 +19,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "dyspatch-python-client"
+NAME = "dyspatch-python"
 VERSION = "1.0.0"
 # To install the library, run the following
 #
@@ -27,14 +33,21 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Dyspatch API",
+    description="Dyspatch API Client",
     author_email="support@dyspatch.io",
-    url="",
-    keywords=["Swagger", "Dyspatch API"],
+    url="https://github.com/getdyspatch/dyspatch-python",
+    keywords=["Swagger", "Dyspatch API", "OpenAPI"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    # Introduction  The Dyspatch API is based on the REST paradigm, and features resource based URLs with standard HTTP response codes to indicate errors. We use standard HTTP authentication and request verbs, and all responses are JSON formatted. See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/) for more details on how to implement Dyspatch.   # noqa: E501
-    """
+    # Introduction
+
+    The Dyspatch API is based on the REST paradigm, and features resource
+    based URLs with standard HTTP response codes to indicate errors.
+    We use standard HTTP authentication and request verbs, and all responses
+    are JSON formatted. See our
+    [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/)
+    for more details on how to implement Dyspatch.
+    """,
 )

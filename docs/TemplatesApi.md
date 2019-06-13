@@ -1,14 +1,11 @@
-# swagger_client.TemplatesApi
+# dyspatch_client.TemplatesApi
 
-All URIs are relative to *https://api.dyspatch.io*
+All URIs are relative to *https://api.dyspatch.io/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**templates_get**](TemplatesApi.md#templates_get) | **GET** /templates | List Templates
-[**templates_template_id_drafts_get**](TemplatesApi.md#templates_template_id_drafts_get) | **GET** /templates/{templateId}/drafts | List Template Drafts
-[**templates_template_id_drafts_template_draft_id_get**](TemplatesApi.md#templates_template_id_drafts_template_draft_id_get) | **GET** /templates/{templateId}/drafts/{templateDraftId} | Get a Draft
 [**templates_template_id_get**](TemplatesApi.md#templates_template_id_get) | **GET** /templates/{templateId} | Get Template by ID
-
 
 # **templates_get**
 > TemplatesRead templates_get(cursor=cursor)
@@ -21,18 +18,18 @@ Gets a list of Template Metadata objects for all templates. Up to 25 results ret
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dyspatch_client
+from dyspatch_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Bearer
-configuration = swagger_client.Configuration()
+configuration = dyspatch_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = dyspatch_client.TemplatesApi(dyspatch_client.ApiClient(configuration))
 cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
 
 try:
@@ -60,124 +57,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2018.02+json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **templates_template_id_drafts_get**
-> TemplateDraftsRead templates_template_id_drafts_get(template_id, cursor=cursor)
-
-List Template Drafts
-
-Gets a list of Template Draft Metadata objects for the specified template. Up to 25 results returned before results are paginated. 
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = swagger_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.TemplatesApi(swagger_client.ApiClient(configuration))
-template_id = 'template_id_example' # str | A template ID
-cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
-
-try:
-    # List Template Drafts
-    api_response = api_instance.templates_template_id_drafts_get(template_id, cursor=cursor)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling TemplatesApi->templates_template_id_drafts_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **template_id** | **str**| A template ID | 
- **cursor** | **str**| A cursor value used to retrieve a specific page from a paginated result set. | [optional] 
-
-### Return type
-
-[**TemplateDraftsRead**](TemplateDraftsRead.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2018.02+json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **templates_template_id_drafts_template_draft_id_get**
-> TemplateDraftRead templates_template_id_drafts_template_draft_id_get(template_draft_id, template_id)
-
-Get a Draft
-
-Gets a Draft object of a Template. This endpoint provides access to unpublished Template drafts. Note that accessing invalid template drafts 
-
-### Example
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = swagger_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.TemplatesApi(swagger_client.ApiClient(configuration))
-template_draft_id = 'template_draft_id_example' # str | A draft ID
-template_id = 'template_id_example' # str | A template ID
-
-try:
-    # Get a Draft
-    api_response = api_instance.templates_template_id_drafts_template_draft_id_get(template_draft_id, template_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling TemplatesApi->templates_template_id_drafts_template_draft_id_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **template_draft_id** | **str**| A draft ID | 
- **template_id** | **str**| A template ID | 
-
-### Return type
-
-[**TemplateDraftRead**](TemplateDraftRead.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2018.02+json
+ - **Accept**: application/vnd.dyspatch.2019.03+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **templates_template_id_get**
-> TemplateRead templates_template_id_get(template_id)
+> TemplateRead templates_template_id_get(template_id, target_language=target_language)
 
 Get Template by ID
 
@@ -187,23 +72,24 @@ Gets a template object with the matching ID. If the template has published conte
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import dyspatch_client
+from dyspatch_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Bearer
-configuration = swagger_client.Configuration()
+configuration = dyspatch_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TemplatesApi(swagger_client.ApiClient(configuration))
+api_instance = dyspatch_client.TemplatesApi(dyspatch_client.ApiClient(configuration))
 template_id = 'template_id_example' # str | A template ID
+target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates. (optional)
 
 try:
     # Get Template by ID
-    api_response = api_instance.templates_template_id_get(template_id)
+    api_response = api_instance.templates_template_id_get(template_id, target_language=target_language)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TemplatesApi->templates_template_id_get: %s\n" % e)
@@ -214,6 +100,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **template_id** | **str**| A template ID | 
+ **target_language** | **str**| The type of templating language to compile as. Should only be used for visual templates. | [optional] 
 
 ### Return type
 
@@ -226,7 +113,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2018.02+json
+ - **Accept**: application/vnd.dyspatch.2019.03+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# flake8: noqa
+
 """
     Dyspatch API
 
@@ -12,29 +14,18 @@
 
 from __future__ import absolute_import
 
-import unittest
-
-import dyspatch_client
-from api.localizations_api import LocalizationsApi  # noqa: E501
-from dyspatch_client.rest import ApiException
-
-
-class TestLocalizationsApi(unittest.TestCase):
-    """LocalizationsApi unit test stubs"""
-
-    def setUp(self):
-        self.api = api.localizations_api.LocalizationsApi()  # noqa: E501
-
-    def tearDown(self):
-        pass
-
-    def test_localizations_localization_id_get(self):
-        """Test case for localizations_localization_id_get
-
-        Get Localization Object by ID  # noqa: E501
-        """
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+# import apis into sdk package
+from dyspatch_client.api.localizations_api import LocalizationsApi
+from dyspatch_client.api.templates_api import TemplatesApi
+# import ApiClient
+from dyspatch_client.api_client import ApiClient
+from dyspatch_client.configuration import Configuration
+# import models into sdk package
+from dyspatch_client.models.api_error import APIError
+from dyspatch_client.models.compiled_read import CompiledRead
+from dyspatch_client.models.cursor import Cursor
+from dyspatch_client.models.localization_meta_read import LocalizationMetaRead
+from dyspatch_client.models.localization_read import LocalizationRead
+from dyspatch_client.models.template_meta_read import TemplateMetaRead
+from dyspatch_client.models.template_read import TemplateRead
+from dyspatch_client.models.templates_read import TemplatesRead

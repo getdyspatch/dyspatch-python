@@ -1,17 +1,18 @@
 # dyspatch_client.LocalizationsApi
 
-All URIs are relative to *https://api.dyspatch.io/*
+All URIs are relative to *https://api.dyspatch.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**localizations_localization_id_get**](LocalizationsApi.md#localizations_localization_id_get) | **GET** /localizations/{localizationId} | Get Localization Object by ID
 
+
 # **localizations_localization_id_get**
-> LocalizationRead localizations_localization_id_get(localization_id, target_language=target_language)
+> LocalizationRead localizations_localization_id_get(localization_id, target_language)
 
 Get Localization Object by ID
 
-Returns a specific localization object with a matching ID
+Returns a specific localization object with a matching ID.
 
 ### Example
 ```python
@@ -30,11 +31,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = dyspatch_client.LocalizationsApi(dyspatch_client.ApiClient(configuration))
 localization_id = 'localization_id_example' # str | A localization ID
-target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates. (optional)
+target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates.
 
 try:
     # Get Localization Object by ID
-    api_response = api_instance.localizations_localization_id_get(localization_id, target_language=target_language)
+    api_response = api_instance.localizations_localization_id_get(localization_id, target_language)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LocalizationsApi->localizations_localization_id_get: %s\n" % e)
@@ -45,7 +46,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **localization_id** | **str**| A localization ID | 
- **target_language** | **str**| The type of templating language to compile as. Should only be used for visual templates. | [optional] 
+ **target_language** | **str**| The type of templating language to compile as. Should only be used for visual templates. | 
 
 ### Return type
 
@@ -58,7 +59,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2019.03+json
+ - **Accept**: application/vnd.dyspatch.2019.10+json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

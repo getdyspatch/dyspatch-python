@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **compiled** | [**CompiledRead**](CompiledRead.md) |  | [optional] 
 **created_at** | **datetime** | The time of initial creation | [optional] 
 **updated_at** | **datetime** | The time of last update | [optional] 
-**localizations** | [**list[LocalizationMetaRead]**](LocalizationMetaRead.md) | A list of the Template&#x27;s available localizations | [optional] 
+**localizations** | [**list[LocalizationMetaRead]**](LocalizationMetaRead.md) | A list of the Template&#39;s available localizations | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

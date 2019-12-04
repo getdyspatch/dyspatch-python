@@ -403,7 +403,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **drafts_get**
-> DraftsRead drafts_get(status=status)
+> DraftsRead drafts_get(cursor=cursor, status=status)
 
 List Drafts
 
@@ -425,11 +425,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
+cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
 status = 'status_example' # str | Filter the list of drafts by a particular status (optional)
 
 try:
     # List Drafts
-    api_response = api_instance.drafts_get(status=status)
+    api_response = api_instance.drafts_get(cursor=cursor, status=status)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DraftsApi->drafts_get: %s\n" % e)
@@ -439,6 +440,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cursor** | **str**| A cursor value used to retrieve a specific page from a paginated result set. | [optional] 
  **status** | **str**| Filter the list of drafts by a particular status | [optional] 
 
 ### Return type

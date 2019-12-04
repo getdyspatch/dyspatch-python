@@ -61,9 +61,6 @@ class LocalizationName(object):
                 ))
             else:
                 result[attr] = value
-        if issubclass(LocalizationName, dict):
-            for key, value in self.items():
-                result[key] = value
 
         return result
 

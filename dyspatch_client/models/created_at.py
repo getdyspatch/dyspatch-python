@@ -61,9 +61,6 @@ class CreatedAt(object):
                 ))
             else:
                 result[attr] = value
-        if issubclass(CreatedAt, dict):
-            for key, value in self.items():
-                result[key] = value
 
         return result
 

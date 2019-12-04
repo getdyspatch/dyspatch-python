@@ -38,11 +38,11 @@ class LocalizationsApi(object):
 
         Returns a specific localization object with a matching ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.localizations_localization_id_get(localization_id, target_language, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.localizations_localization_id_get(localization_id, target_language, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param str localization_id: A localization ID (required)
         :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
         :return: LocalizationRead
@@ -50,7 +50,7 @@ class LocalizationsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        if kwargs.get('async'):
             return self.localizations_localization_id_get_with_http_info(localization_id, target_language, **kwargs)  # noqa: E501
         else:
             (data) = self.localizations_localization_id_get_with_http_info(localization_id, target_language, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class LocalizationsApi(object):
 
         Returns a specific localization object with a matching ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.localizations_localization_id_get_with_http_info(localization_id, target_language, async_req=True)
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.localizations_localization_id_get_with_http_info(localization_id, target_language, async=True)
         >>> result = thread.get()
 
-        :param async_req bool
+        :param async bool
         :param str localization_id: A localization ID (required)
         :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
         :return: LocalizationRead
@@ -74,7 +74,7 @@ class LocalizationsApi(object):
         """
 
         all_params = ['localization_id', 'target_language']  # noqa: E501
-        all_params.append('async_req')
+        all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class LocalizationsApi(object):
             files=local_var_files,
             response_type='LocalizationRead',  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
+            async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

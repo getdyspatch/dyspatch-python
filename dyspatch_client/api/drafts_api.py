@@ -760,6 +760,7 @@ class DraftsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str cursor: A cursor value used to retrieve a specific page from a paginated result set.
         :param str status: Filter the list of drafts by a particular status
         :return: DraftsRead
                  If the method is called asynchronously,
@@ -782,13 +783,14 @@ class DraftsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str cursor: A cursor value used to retrieve a specific page from a paginated result set.
         :param str status: Filter the list of drafts by a particular status
         :return: DraftsRead
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['status']  # noqa: E501
+        all_params = ['cursor', 'status']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -809,6 +811,8 @@ class DraftsApi(object):
         path_params = {}
 
         query_params = []
+        if 'cursor' in params:
+            query_params.append(('cursor', params['cursor']))  # noqa: E501
         if 'status' in params:
             query_params.append(('status', params['status']))  # noqa: E501
 

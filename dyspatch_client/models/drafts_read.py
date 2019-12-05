@@ -31,7 +31,7 @@ class DraftsRead(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'cursor': 'object',
+        'cursor': 'Cursor',
         'data': 'list[DraftMetaRead]'
     }
 
@@ -56,10 +56,9 @@ class DraftsRead(object):
     def cursor(self):
         """Gets the cursor of this DraftsRead.  # noqa: E501
 
-        Information about paginated results  # noqa: E501
 
         :return: The cursor of this DraftsRead.  # noqa: E501
-        :rtype: object
+        :rtype: Cursor
         """
         return self._cursor
 
@@ -67,10 +66,9 @@ class DraftsRead(object):
     def cursor(self, cursor):
         """Sets the cursor of this DraftsRead.
 
-        Information about paginated results  # noqa: E501
 
         :param cursor: The cursor of this DraftsRead.  # noqa: E501
-        :type: object
+        :type: Cursor
         """
 
         self._cursor = cursor

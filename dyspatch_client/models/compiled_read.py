@@ -209,6 +209,9 @@ class CompiledRead(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(CompiledRead, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

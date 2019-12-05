@@ -61,6 +61,9 @@ class LanguageId(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(LanguageId, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

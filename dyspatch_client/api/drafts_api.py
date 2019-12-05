@@ -38,11 +38,11 @@ class DraftsApi(object):
 
         Gets a draft object with the matching ID. The \"compiled\" field will contain the unlocalized default template object.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_get(draft_id, target_language, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_get(draft_id, target_language, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
         :return: DraftRead
@@ -50,7 +50,7 @@ class DraftsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_get_with_http_info(draft_id, target_language, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_get_with_http_info(draft_id, target_language, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class DraftsApi(object):
 
         Gets a draft object with the matching ID. The \"compiled\" field will contain the unlocalized default template object.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_get_with_http_info(draft_id, target_language, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_get_with_http_info(draft_id, target_language, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
         :return: DraftRead
@@ -74,7 +74,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id', 'target_language']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type='DraftRead',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,11 +141,11 @@ class DraftsApi(object):
 
         Returns the list of values that need to be translated for the draft. Set the `Accept` header to `application/vnd.dyspatch.2019.10+json` to get a JSON object, or `text/vnd.dyspatch.2019.10+x-gettext-translation` to get the POT file.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localization_keys_get(draft_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localization_keys_get(draft_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str accept: A version of the API that should be used for the request. For example, to use version \"2019.10\", set the value to \"application/vnd.dyspatch.2019.10+json\".
         :return: list[LocalizationKeyRead]
@@ -153,7 +153,7 @@ class DraftsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_localization_keys_get_with_http_info(draft_id, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_localization_keys_get_with_http_info(draft_id, **kwargs)  # noqa: E501
@@ -164,11 +164,11 @@ class DraftsApi(object):
 
         Returns the list of values that need to be translated for the draft. Set the `Accept` header to `application/vnd.dyspatch.2019.10+json` to get a JSON object, or `text/vnd.dyspatch.2019.10+x-gettext-translation` to get the POT file.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localization_keys_get_with_http_info(draft_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localization_keys_get_with_http_info(draft_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str accept: A version of the API that should be used for the request. For example, to use version \"2019.10\", set the value to \"application/vnd.dyspatch.2019.10+json\".
         :return: list[LocalizationKeyRead]
@@ -177,7 +177,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id', 'accept']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type='list[LocalizationKeyRead]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -240,18 +240,18 @@ class DraftsApi(object):
 
         Returns localization metadata object for a template draft.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_get(draft_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_get(draft_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :return: list[LocalizationMetaRead]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_localizations_get_with_http_info(draft_id, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_localizations_get_with_http_info(draft_id, **kwargs)  # noqa: E501
@@ -262,11 +262,11 @@ class DraftsApi(object):
 
         Returns localization metadata object for a template draft.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_get_with_http_info(draft_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_get_with_http_info(draft_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :return: list[LocalizationMetaRead]
                  If the method is called asynchronously,
@@ -274,7 +274,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -324,7 +324,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type='list[LocalizationMetaRead]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -335,11 +335,11 @@ class DraftsApi(object):
 
         Deletes the localization with the given `languageId` if it exists.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_language_id_delete(draft_id, language_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_language_id_delete(draft_id, language_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :return: None
@@ -347,7 +347,7 @@ class DraftsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_localizations_language_id_delete_with_http_info(draft_id, language_id, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_localizations_language_id_delete_with_http_info(draft_id, language_id, **kwargs)  # noqa: E501
@@ -358,11 +358,11 @@ class DraftsApi(object):
 
         Deletes the localization with the given `languageId` if it exists.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_language_id_delete_with_http_info(draft_id, language_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_language_id_delete_with_http_info(draft_id, language_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :return: None
@@ -371,7 +371,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id', 'language_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -427,7 +427,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -438,11 +438,11 @@ class DraftsApi(object):
 
         Inserts a localization or sets the name on an existing localization that already uses the `languageId`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_language_id_put(draft_id, language_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_language_id_put(draft_id, language_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :param Body body: (required)
@@ -451,7 +451,7 @@ class DraftsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_localizations_language_id_put_with_http_info(draft_id, language_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_localizations_language_id_put_with_http_info(draft_id, language_id, body, **kwargs)  # noqa: E501
@@ -462,11 +462,11 @@ class DraftsApi(object):
 
         Inserts a localization or sets the name on an existing localization that already uses the `languageId`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_language_id_put_with_http_info(draft_id, language_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_language_id_put_with_http_info(draft_id, language_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :param Body body: (required)
@@ -476,7 +476,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id', 'language_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -538,7 +538,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -549,11 +549,11 @@ class DraftsApi(object):
 
         Completely replaces any existing translations for the given language with those provided in request body. Variables embedded in keys or values are expected to be in the format `%(my_variable)s` and will automatically convert to the correct Dyspatch format depending on the type of template. Accepts key/value pairs in JSON format or in gettext PO file format. For JSON set `Content-Type` header to `application/json`. For gettext PO format set `Content-Type` header to `text/x-gettext-translation`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_language_id_translations_put(draft_id, language_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_language_id_translations_put(draft_id, language_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :param object body: (required)
@@ -562,7 +562,7 @@ class DraftsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_localizations_language_id_translations_put_with_http_info(draft_id, language_id, body, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_localizations_language_id_translations_put_with_http_info(draft_id, language_id, body, **kwargs)  # noqa: E501
@@ -573,11 +573,11 @@ class DraftsApi(object):
 
         Completely replaces any existing translations for the given language with those provided in request body. Variables embedded in keys or values are expected to be in the format `%(my_variable)s` and will automatically convert to the correct Dyspatch format depending on the type of template. Accepts key/value pairs in JSON format or in gettext PO file format. For JSON set `Content-Type` header to `application/json`. For gettext PO format set `Content-Type` header to `text/x-gettext-translation`.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_localizations_language_id_translations_put_with_http_info(draft_id, language_id, body, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_localizations_language_id_translations_put_with_http_info(draft_id, language_id, body, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :param object body: (required)
@@ -587,7 +587,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id', 'language_id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -649,7 +649,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -660,18 +660,18 @@ class DraftsApi(object):
 
         Moves the draft into [submitted and locked state](https://docs.dyspatch.io/templates/submitting_a_template/#awaiting-approval). This will allow your email stakeholders to review the template draft and provide feedback.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_publish_request_post(draft_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_publish_request_post(draft_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_draft_id_publish_request_post_with_http_info(draft_id, **kwargs)  # noqa: E501
         else:
             (data) = self.drafts_draft_id_publish_request_post_with_http_info(draft_id, **kwargs)  # noqa: E501
@@ -682,11 +682,11 @@ class DraftsApi(object):
 
         Moves the draft into [submitted and locked state](https://docs.dyspatch.io/templates/submitting_a_template/#awaiting-approval). This will allow your email stakeholders to review the template draft and provide feedback.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_draft_id_publish_request_post_with_http_info(draft_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_draft_id_publish_request_post_with_http_info(draft_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str draft_id: A draft ID (required)
         :return: None
                  If the method is called asynchronously,
@@ -694,7 +694,7 @@ class DraftsApi(object):
         """
 
         all_params = ['draft_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -744,7 +744,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -755,11 +755,11 @@ class DraftsApi(object):
 
         Gets a list of all drafts for your oranization. Up to 25 results returned before results are paginated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cursor: A cursor value used to retrieve a specific page from a paginated result set.
         :param str status: Filter the list of drafts by a particular status
         :return: DraftsRead
@@ -767,7 +767,7 @@ class DraftsApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.drafts_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.drafts_get_with_http_info(**kwargs)  # noqa: E501
@@ -778,11 +778,11 @@ class DraftsApi(object):
 
         Gets a list of all drafts for your oranization. Up to 25 results returned before results are paginated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.drafts_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.drafts_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cursor: A cursor value used to retrieve a specific page from a paginated result set.
         :param str status: Filter the list of drafts by a particular status
         :return: DraftsRead
@@ -791,7 +791,7 @@ class DraftsApi(object):
         """
 
         all_params = ['cursor', 'status']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -839,7 +839,7 @@ class DraftsApi(object):
             files=local_var_files,
             response_type='DraftsRead',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

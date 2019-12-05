@@ -61,6 +61,9 @@ class TemplateDescription(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(TemplateDescription, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

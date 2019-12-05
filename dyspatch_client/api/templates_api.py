@@ -38,18 +38,18 @@ class TemplatesApi(object):
 
         Gets a list of Template Metadata objects for all templates. Up to 25 results returned before results are paginated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.templates_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.templates_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cursor: A cursor value used to retrieve a specific page from a paginated result set.
         :return: TemplatesRead
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.templates_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.templates_get_with_http_info(**kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class TemplatesApi(object):
 
         Gets a list of Template Metadata objects for all templates. Up to 25 results returned before results are paginated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.templates_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.templates_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cursor: A cursor value used to retrieve a specific page from a paginated result set.
         :return: TemplatesRead
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class TemplatesApi(object):
         """
 
         all_params = ['cursor']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -118,7 +118,7 @@ class TemplatesApi(object):
             files=local_var_files,
             response_type='TemplatesRead',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -129,11 +129,11 @@ class TemplatesApi(object):
 
         Gets a template object with the matching ID. If the template has published content the \"compiled\" field will contain the template .  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.templates_template_id_get(template_id, target_language, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.templates_template_id_get(template_id, target_language, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str template_id: A template ID (required)
         :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
         :return: TemplateRead
@@ -141,7 +141,7 @@ class TemplatesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.templates_template_id_get_with_http_info(template_id, target_language, **kwargs)  # noqa: E501
         else:
             (data) = self.templates_template_id_get_with_http_info(template_id, target_language, **kwargs)  # noqa: E501
@@ -152,11 +152,11 @@ class TemplatesApi(object):
 
         Gets a template object with the matching ID. If the template has published content the \"compiled\" field will contain the template .  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.templates_template_id_get_with_http_info(template_id, target_language, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.templates_template_id_get_with_http_info(template_id, target_language, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str template_id: A template ID (required)
         :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
         :return: TemplateRead
@@ -165,7 +165,7 @@ class TemplatesApi(object):
         """
 
         all_params = ['template_id', 'target_language']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -221,7 +221,7 @@ class TemplatesApi(object):
             files=local_var_files,
             response_type='TemplateRead',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

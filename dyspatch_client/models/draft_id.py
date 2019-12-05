@@ -61,6 +61,9 @@ class DraftId(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(DraftId, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

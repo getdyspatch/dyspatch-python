@@ -24,3 +24,5 @@ jobs:
     - name: Test with nosetests
       run: |
         nosetests
+      env:
+        DYSPATCH_API_KEY: ${{ secrets.DYSPATCH_API_KEY }}

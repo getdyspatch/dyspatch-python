@@ -37,7 +37,7 @@ class TestDraftRead(unittest.TestCase):
 
         draft = self.drafts.get_draft_by_id(
             drafts.data[0].id,
-            "",
+            "handlebars",
             version,
         )
         print(draft)

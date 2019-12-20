@@ -25,7 +25,7 @@ class TestDraftRead(unittest.TestCase):
 
         template = self.api.get_template_by_id(
             templates.data[0].id,
-            "handlebars",
+            "",
             version,
         )
         print(template)

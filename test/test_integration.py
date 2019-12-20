@@ -20,7 +20,7 @@ class TestDraftRead(unittest.TestCase):
         self.api = dyspatch_client.api.templates_api.TemplatesApi(client)
 
     def test_list_templates(self):
-        templates = self.api.get_template(version)
+        templates = self.api.get_templates(version)
         print(templates)
 
         template = self.api.get_template_by_id(

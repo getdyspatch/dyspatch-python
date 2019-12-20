@@ -1,5 +1,6 @@
 # TemplateRead
 
+list of template metadata
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

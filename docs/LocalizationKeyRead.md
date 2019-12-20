@@ -1,5 +1,6 @@
 # LocalizationKeyRead
 
+localization key
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

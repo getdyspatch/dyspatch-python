@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import dyspatch_client
-from dyspatch_client.models.localization_meta_read import LocalizationMetaRead  # noqa: E501
+from dyspatch_client.models.inline_object import InlineObject  # noqa: E501
 from dyspatch_client.rest import ApiException
 
 
-class TestLocalizationMetaRead(unittest.TestCase):
-    """LocalizationMetaRead unit test stubs"""
+class TestInlineObject(unittest.TestCase):
+    """InlineObject unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestLocalizationMetaRead(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testLocalizationMetaRead(self):
-        """Test LocalizationMetaRead"""
+    def testInlineObject(self):
+        """Test InlineObject"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = dyspatch_client.models.localization_meta_read.LocalizationMetaRead()  # noqa: E501
+        # model = dyspatch_client.models.inline_object.InlineObject()  # noqa: E501
         pass
 
 

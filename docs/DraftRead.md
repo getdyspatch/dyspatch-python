@@ -1,5 +1,6 @@
 # DraftRead
 
+template draft metadata included latest draft revision
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

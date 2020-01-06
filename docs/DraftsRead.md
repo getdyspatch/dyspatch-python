@@ -1,5 +1,6 @@
 # DraftsRead
 
+list of draft metadata
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,6 @@
 # Cursor
 
+Information about paginated results
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

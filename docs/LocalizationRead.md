@@ -1,10 +1,11 @@
 # LocalizationRead
 
+localization metadata and latest revision for associated template
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | An opaque, unique identifier for a localization | [optional] 
-**language** | **str** | A language identifier comprised of a language and a country identifier.  See [supported languages](https://docs.dyspatch.io/localization/supported_languages/).  | [optional] 
+**language** | **str** | A language identifier comprised of a language and a country identifier. See [supported languages](https://docs.dyspatch.io/localization/supported_languages/).  | [optional] 
 **url** | **str** | The API url for a specific localization | [optional] 
 **template** | **str** | An opaque, unique identifier for a template | [optional] 
 **compiled** | [**CompiledRead**](CompiledRead.md) |  | [optional] 

@@ -36,7 +36,7 @@ configuration.host = "https://api.dyspatch.io"
 api_instance = dyspatch_client.TemplatesApi(dyspatch_client.ApiClient(configuration))
 template_id = 'template_id_example' # str | A template ID
 target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates.
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2019.10\", set the value to \"application/vnd.dyspatch.2019.10+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
 try:
     # Get Template by ID
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **template_id** | **str**| A template ID | 
  **target_language** | **str**| The type of templating language to compile as. Should only be used for visual templates. | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2019.10\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.10+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2019.10+json, */*
+ - **Accept**: application/vnd.dyspatch.2020.04+json, */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -107,7 +107,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.host = "https://api.dyspatch.io"
 # Create an instance of the API class
 api_instance = dyspatch_client.TemplatesApi(dyspatch_client.ApiClient(configuration))
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2019.10\", set the value to \"application/vnd.dyspatch.2019.10+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
 
 try:
@@ -122,7 +122,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2019.10\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.10+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
  **cursor** | **str**| A cursor value used to retrieve a specific page from a paginated result set. | [optional] 
 
 ### Return type
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2019.10+json, */*
+ - **Accept**: application/vnd.dyspatch.2020.04+json, */*
 
 ### HTTP response details
 | Status code | Description | Response headers |

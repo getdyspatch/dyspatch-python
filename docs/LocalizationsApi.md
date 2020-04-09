@@ -35,7 +35,7 @@ configuration.host = "https://api.dyspatch.io"
 api_instance = dyspatch_client.LocalizationsApi(dyspatch_client.ApiClient(configuration))
 localization_id = 'localization_id_example' # str | A localization ID
 target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates.
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2019.10\", set the value to \"application/vnd.dyspatch.2019.10+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
 try:
     # Get Localization Object by ID
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **localization_id** | **str**| A localization ID | 
  **target_language** | **str**| The type of templating language to compile as. Should only be used for visual templates. | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2019.10\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.10+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
 
 ### Return type
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2019.10+json, */*
+ - **Accept**: application/vnd.dyspatch.2020.04+json, */*
 
 ### HTTP response details
 | Status code | Description | Response headers |

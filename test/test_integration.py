@@ -7,7 +7,7 @@ import os
 
 import dyspatch_client
 
-version = "application/vnd.dyspatch.2019.10+json"
+version = "application/vnd.dyspatch.2020.04+json"
 
 class TestDraftRead(unittest.TestCase):
     """DraftRead unit test stubs"""

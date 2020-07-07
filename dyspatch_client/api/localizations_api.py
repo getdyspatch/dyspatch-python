@@ -43,30 +43,23 @@ class LocalizationsApi(object):
         Returns a specific localization object with a matching ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.get_localization_by_id(localization_id, target_language, accept, async_req=True)
         >>> result = thread.get()
 
-        :param localization_id: A localization ID (required)
-        :type localization_id: str
-        :param target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
-        :type target_language: str
-        :param accept: A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\" (required)
-        :type accept: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param str localization_id: A localization ID (required)
+        :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
+        :param str accept: A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\" (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: LocalizationRead
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: LocalizationRead
         """
         kwargs['_return_http_data_only'] = True
         return self.get_localization_by_id_with_http_info(localization_id, target_language, accept, **kwargs)  # noqa: E501
@@ -77,37 +70,25 @@ class LocalizationsApi(object):
         Returns a specific localization object with a matching ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.get_localization_by_id_with_http_info(localization_id, target_language, accept, async_req=True)
         >>> result = thread.get()
 
-        :param localization_id: A localization ID (required)
-        :type localization_id: str
-        :param target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
-        :type target_language: str
-        :param accept: A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\" (required)
-        :type accept: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param str localization_id: A localization ID (required)
+        :param str target_language: The type of templating language to compile as. Should only be used for visual templates. (required)
+        :param str accept: A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\" (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(LocalizationRead, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(LocalizationRead, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -122,8 +103,7 @@ class LocalizationsApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -187,5 +167,4 @@ class LocalizationsApi(object):
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

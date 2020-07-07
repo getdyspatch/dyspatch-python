@@ -20,6 +20,7 @@ import dyspatch_client
 from dyspatch_client.models.drafts_read import DraftsRead  # noqa: E501
 from dyspatch_client.rest import ApiException
 
+
 class TestDraftsRead(unittest.TestCase):
     """DraftsRead unit test stubs"""
 
@@ -35,24 +36,25 @@ class TestDraftsRead(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = dyspatch_client.models.drafts_read.DraftsRead()  # noqa: E501
-        if include_optional :
+        if include_optional:
             return DraftsRead(
-                cursor = dyspatch_client.models.cursor.cursor(
-                    next = '0', 
-                    has_more = True, ), 
-                data = [
+                cursor=dyspatch_client.models.cursor.Cursor(
+                    next='0',
+                    has_more=True, ),
+                data=[
                     dyspatch_client.models.draft_meta_read.DraftMetaRead(
-                        id = 'tdft_g3L7Cw6Hp5wU', 
-                        template_id = 'tem_g3L7Cw6Hp5wU', 
-                        name = '0', 
-                        url = '/drafts/tdft_g3L7Cw6Hp5wUaf395LehwK/dft_g3L7Cw6Hp5wU', 
-                        created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                        updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
-                    ]
+                        id='tdft_g3L7Cw6Hp5wU',
+                        template_id='tem_g3L7Cw6Hp5wU',
+                        name='0',
+                        url='/drafts/tdft_g3L7Cw6Hp5wUaf395LehwK/dft_g3L7Cw6Hp5wU',
+                        created_at=datetime.datetime.strptime(
+                            '2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                        updated_at=datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
+                ]
             )
-        else :
+        else:
             return DraftsRead(
-        )
+            )
 
     def testDraftsRead(self):
         """Test DraftsRead"""

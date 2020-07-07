@@ -20,6 +20,7 @@ import dyspatch_client
 from dyspatch_client.models.templates_read import TemplatesRead  # noqa: E501
 from dyspatch_client.rest import ApiException
 
+
 class TestTemplatesRead(unittest.TestCase):
     """TemplatesRead unit test stubs"""
 
@@ -35,34 +36,35 @@ class TestTemplatesRead(unittest.TestCase):
             params are included, when True both required and
             optional params are included """
         # model = dyspatch_client.models.templates_read.TemplatesRead()  # noqa: E501
-        if include_optional :
+        if include_optional:
             return TemplatesRead(
-                cursor = dyspatch_client.models.cursor.cursor(
-                    next = '0', 
-                    has_more = True, ), 
-                data = [
+                cursor=dyspatch_client.models.cursor.Cursor(
+                    next='0',
+                    has_more=True, ),
+                data=[
                     dyspatch_client.models.template_meta_read.TemplateMetaRead(
-                        id = 'tem_g3L7Cw6Hp5wU', 
-                        name = '0', 
-                        description = '0', 
-                        url = '/templates/tem_g3L7Cw6Hp5wUaf395LehwK', 
-                        localizations = [
+                        id='tem_g3L7Cw6Hp5wU',
+                        name='0',
+                        description='0',
+                        url='/templates/tem_g3L7Cw6Hp5wUaf395LehwK',
+                        localizations=[
                             dyspatch_client.models.localization_meta_read.LocalizationMetaRead(
-                                id = 'loc_g3L7Cw6Hp5wUaf395LehwK', 
-                                name = 'English (US)', 
-                                url = '/localizations/loc_g3L7Cw6Hp5wUaf395LehwK', 
-                                locale_group = 'lgr_alka38ajla301', 
-                                languages = [
+                                id='loc_g3L7Cw6Hp5wUaf395LehwK',
+                                name='English (US)',
+                                url='/localizations/loc_g3L7Cw6Hp5wUaf395LehwK',
+                                locale_group='lgr_alka38ajla301',
+                                languages=[
                                     '0'
-                                    ], )
-                            ], 
-                        created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                        updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
-                    ]
+                                ], )
+                        ],
+                        created_at=datetime.datetime.strptime(
+                            '2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                        updated_at=datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
+                ]
             )
-        else :
+        else:
             return TemplatesRead(
-        )
+            )
 
     def testTemplatesRead(self):
         """Test TemplatesRead"""

@@ -3,7 +3,7 @@
 """
     Dyspatch API
 
-    # Introduction The Dyspatch API is based on the REST paradigm, and features resource based URLs with standard HTTP response codes to indicate errors. We use standard HTTP authentication and request verbs, and all responses are JSON formatted. See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/) for more details on how to implement Dyspatch. ## API Client Libraries Dyspatch provides API Clients for popular languages and web frameworks. - [Java](https://github.com/getdyspatch/dyspatch-java) - [Javascript](https://github.com/getdyspatch/dyspatch-javascript) - [Python](https://github.com/getdyspatch/dyspatch-python) - [C#](https://github.com/getdyspatch/dyspatch-dotnet) - [Go](https://github.com/getdyspatch/dyspatch-golang) - [Ruby](https://github.com/getdyspatch/dyspatch-ruby)   # noqa: E501
+    # Introduction  The Dyspatch API is based on the REST paradigm, and features resource based URLs with standard HTTP response codes to indicate errors. We use standard HTTP authentication and request verbs, and all responses are JSON formatted. See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/) for more details on how to implement Dyspatch.  ## API Client Libraries Dyspatch provides API Clients for popular languages and web frameworks.  - [Java](https://github.com/getdyspatch/dyspatch-java) - [Javascript](https://github.com/getdyspatch/dyspatch-javascript) - [Python](https://github.com/getdyspatch/dyspatch-python) - [C#](https://github.com/getdyspatch/dyspatch-dotnet) - [Go](https://github.com/getdyspatch/dyspatch-golang) - [Ruby](https://github.com/getdyspatch/dyspatch-ruby)   # noqa: E501
 
     The version of the OpenAPI document: 2020.04
     Contact: support@dyspatch.io
@@ -37,7 +37,6 @@ class DraftMetaRead(object):
         'id': 'str',
         'template_id': 'str',
         'name': 'str',
-        'description': 'str',
         'url': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -47,13 +46,12 @@ class DraftMetaRead(object):
         'id': 'id',
         'template_id': 'templateId',
         'name': 'name',
-        'description': 'description',
         'url': 'url',
         'created_at': 'createdAt',
         'updated_at': 'updatedAt'
     }
 
-    def __init__(self, id=None, template_id=None, name=None, description=None, url=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, template_id=None, name=None, url=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """DraftMetaRead - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,7 +60,6 @@ class DraftMetaRead(object):
         self._id = None
         self._template_id = None
         self._name = None
-        self._description = None
         self._url = None
         self._created_at = None
         self._updated_at = None
@@ -74,8 +71,6 @@ class DraftMetaRead(object):
             self.template_id = template_id
         if name is not None:
             self.name = name
-        if description is not None:
-            self.description = description
         if url is not None:
             self.url = url
         if created_at is not None:
@@ -151,29 +146,6 @@ class DraftMetaRead(object):
         """
 
         self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this DraftMetaRead.  # noqa: E501
-
-        A description of the draft  # noqa: E501
-
-        :return: The description of this DraftMetaRead.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this DraftMetaRead.
-
-        A description of the draft  # noqa: E501
-
-        :param description: The description of this DraftMetaRead.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def url(self):

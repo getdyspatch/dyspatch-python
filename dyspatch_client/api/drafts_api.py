@@ -3,7 +3,7 @@
 """
     Dyspatch API
 
-    # Introduction The Dyspatch API is based on the REST paradigm, and features resource based URLs with standard HTTP response codes to indicate errors. We use standard HTTP authentication and request verbs, and all responses are JSON formatted. See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/) for more details on how to implement Dyspatch. ## API Client Libraries Dyspatch provides API Clients for popular languages and web frameworks. - [Java](https://github.com/getdyspatch/dyspatch-java) - [Javascript](https://github.com/getdyspatch/dyspatch-javascript) - [Python](https://github.com/getdyspatch/dyspatch-python) - [C#](https://github.com/getdyspatch/dyspatch-dotnet) - [Go](https://github.com/getdyspatch/dyspatch-golang) - [Ruby](https://github.com/getdyspatch/dyspatch-ruby)   # noqa: E501
+    # Introduction  The Dyspatch API is based on the REST paradigm, and features resource based URLs with standard HTTP response codes to indicate errors. We use standard HTTP authentication and request verbs, and all responses are JSON formatted. See our [Implementation Guide](https://docs.dyspatch.io/development/implementing_dyspatch/) for more details on how to implement Dyspatch.  ## API Client Libraries Dyspatch provides API Clients for popular languages and web frameworks.  - [Java](https://github.com/getdyspatch/dyspatch-java) - [Javascript](https://github.com/getdyspatch/dyspatch-javascript) - [Python](https://github.com/getdyspatch/dyspatch-python) - [C#](https://github.com/getdyspatch/dyspatch-dotnet) - [Go](https://github.com/getdyspatch/dyspatch-golang) - [Ruby](https://github.com/getdyspatch/dyspatch-ruby)   # noqa: E501
 
     The version of the OpenAPI document: 2020.04
     Contact: support@dyspatch.io
@@ -19,7 +19,7 @@ import re  # noqa: F401
 import six
 
 from dyspatch_client.api_client import ApiClient
-from dyspatch_client.exceptions import (
+from dyspatch_client.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )
@@ -93,11 +93,19 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'language_id', 'accept']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'language_id',
+            'accept'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -213,11 +221,19 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'target_language', 'accept']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'target_language',
+            'accept'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -335,11 +351,18 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'accept']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'accept'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -376,7 +399,7 @@ class DraftsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/vnd.dyspatch.2020.04+json', 'text/vnd.dyspatch.2020.04+x-gettext-translation'])  # noqa: E501
+            ['application/vnd.dyspatch.2020.04+json', '*/*'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
@@ -453,11 +476,19 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['accept', 'cursor', 'status']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'accept',
+            'cursor',
+            'status'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -567,11 +598,18 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'accept']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'accept'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -608,7 +646,7 @@ class DraftsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/vnd.dyspatch.2020.04+json'])  # noqa: E501
+            ['application/vnd.dyspatch.2020.04+json', '*/*'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
@@ -687,11 +725,20 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'language_id', 'accept', 'inline_object']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'language_id',
+            'accept',
+            'inline_object'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -819,11 +866,20 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'language_id', 'accept', 'request_body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'language_id',
+            'accept',
+            'request_body'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -872,7 +928,7 @@ class DraftsApi(object):
             body_params = local_var_params['request_body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+            ['application/vnd.dyspatch.2020.04+json', '*/*'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
@@ -951,11 +1007,18 @@ class DraftsApi(object):
 
         local_var_params = locals()
 
-        all_params = ['draft_id', 'accept']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            'draft_id',
+            'accept'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
@@ -992,7 +1055,7 @@ class DraftsApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+            ['application/vnd.dyspatch.2020.04+json', '*/*'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501

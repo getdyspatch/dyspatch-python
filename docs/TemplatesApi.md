@@ -24,26 +24,41 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.TemplatesApi(dyspatch_client.ApiClient(configuration))
-template_id = 'template_id_example' # str | A template ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.TemplatesApi(api_client)
+    template_id = 'template_id_example' # str | A template ID
 target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates.
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
-try:
-    # Get Template by ID
-    api_response = api_instance.get_template_by_id(template_id, target_language, accept)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling TemplatesApi->get_template_by_id: %s\n" % e)
+    try:
+        # Get Template by ID
+        api_response = api_instance.get_template_by_id(template_id, target_language, accept)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TemplatesApi->get_template_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -97,25 +112,40 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.TemplatesApi(dyspatch_client.ApiClient(configuration))
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.TemplatesApi(api_client)
+    accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
 
-try:
-    # List Templates
-    api_response = api_instance.get_templates(accept, cursor=cursor)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling TemplatesApi->get_templates: %s\n" % e)
+    try:
+        # List Templates
+        api_response = api_instance.get_templates(accept, cursor=cursor)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling TemplatesApi->get_templates: %s\n" % e)
 ```
 
 ### Parameters

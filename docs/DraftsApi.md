@@ -30,25 +30,40 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 language_id = 'language_id_example' # str | A language ID (eg: en-US)
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
-try:
-    # Remove a localization
-    api_instance.delete_localization(draft_id, language_id, accept)
-except ApiException as e:
-    print("Exception when calling DraftsApi->delete_localization: %s\n" % e)
+    try:
+        # Remove a localization
+        api_instance.delete_localization(draft_id, language_id, accept)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->delete_localization: %s\n" % e)
 ```
 
 ### Parameters
@@ -95,26 +110,41 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates.
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
-try:
-    # Get Draft by ID
-    api_response = api_instance.get_draft_by_id(draft_id, target_language, accept)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DraftsApi->get_draft_by_id: %s\n" % e)
+    try:
+        # Get Draft by ID
+        api_response = api_instance.get_draft_by_id(draft_id, target_language, accept)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->get_draft_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -168,25 +198,40 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
-try:
-    # Get localization keys
-    api_response = api_instance.get_draft_localization_keys(draft_id, accept)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DraftsApi->get_draft_localization_keys: %s\n" % e)
+    try:
+        # Get localization keys
+        api_response = api_instance.get_draft_localization_keys(draft_id, accept)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->get_draft_localization_keys: %s\n" % e)
 ```
 
 ### Parameters
@@ -232,26 +277,41 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
 status = 'status_example' # str | Filter the list of drafts by a particular status (optional)
 
-try:
-    # List Drafts
-    api_response = api_instance.get_drafts(accept, cursor=cursor, status=status)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DraftsApi->get_drafts: %s\n" % e)
+    try:
+        # List Drafts
+        api_response = api_instance.get_drafts(accept, cursor=cursor, status=status)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->get_drafts: %s\n" % e)
 ```
 
 ### Parameters
@@ -305,25 +365,40 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
-try:
-    # Get localizations on a draft
-    api_response = api_instance.get_localization_for_draft(draft_id, accept)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DraftsApi->get_localization_for_draft: %s\n" % e)
+    try:
+        # Get localizations on a draft
+        api_response = api_instance.get_localization_for_draft(draft_id, accept)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->get_localization_for_draft: %s\n" % e)
 ```
 
 ### Parameters
@@ -369,26 +444,41 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 language_id = 'language_id_example' # str | A language ID (eg: en-US)
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 inline_object = dyspatch_client.InlineObject() # InlineObject | 
 
-try:
-    # Create or update a localization
-    api_instance.save_localization(draft_id, language_id, accept, inline_object)
-except ApiException as e:
-    print("Exception when calling DraftsApi->save_localization: %s\n" % e)
+    try:
+        # Create or update a localization
+        api_instance.save_localization(draft_id, language_id, accept, inline_object)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->save_localization: %s\n" % e)
 ```
 
 ### Parameters
@@ -436,26 +526,41 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 language_id = 'language_id_example' # str | A language ID (eg: en-US)
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 request_body = {'key': 'request_body_example'} # dict(str, str) | 
 
-try:
-    # Set translations for language
-    api_instance.set_translation(draft_id, language_id, accept, request_body)
-except ApiException as e:
-    print("Exception when calling DraftsApi->set_translation: %s\n" % e)
+    try:
+        # Set translations for language
+        api_instance.set_translation(draft_id, language_id, accept, request_body)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->set_translation: %s\n" % e)
 ```
 
 ### Parameters
@@ -504,24 +609,39 @@ import time
 import dyspatch_client
 from dyspatch_client.rest import ApiException
 from pprint import pprint
-configuration = dyspatch_client.Configuration()
+# Defining the host is optional and defaults to https://api.dyspatch.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = dyspatch_client.Configuration(
+    host = "https://api.dyspatch.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# Defining host is optional and default to https://api.dyspatch.io
-configuration.host = "https://api.dyspatch.io"
-# Create an instance of the API class
-api_instance = dyspatch_client.DraftsApi(dyspatch_client.ApiClient(configuration))
-draft_id = 'draft_id_example' # str | A draft ID
+# Enter a context with an instance of the API client
+with dyspatch_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = dyspatch_client.DraftsApi(api_client)
+    draft_id = 'draft_id_example' # str | A draft ID
 accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
 
-try:
-    # Submit the draft for approval
-    api_instance.submit_draft_for_approval(draft_id, accept)
-except ApiException as e:
-    print("Exception when calling DraftsApi->submit_draft_for_approval: %s\n" % e)
+    try:
+        # Submit the draft for approval
+        api_instance.submit_draft_for_approval(draft_id, accept)
+    except ApiException as e:
+        print("Exception when calling DraftsApi->submit_draft_for_approval: %s\n" % e)
 ```
 
 ### Parameters

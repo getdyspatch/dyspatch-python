@@ -57,7 +57,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
 language_id = 'language_id_example' # str | A language ID (eg: en-US)
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 
     try:
         # Remove a localization
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
  **language_id** | **str**| A language ID (eg: en-US) | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
 
 ### Return type
 
@@ -137,7 +137,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
 target_language = 'target_language_example' # str | The type of templating language to compile as. Should only be used for visual templates.
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 
     try:
         # Get Draft by ID
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
  **target_language** | **str**| The type of templating language to compile as. Should only be used for visual templates. | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
 
 ### Return type
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2020.04+json, */*
+ - **Accept**: application/vnd.dyspatch.2020.08+json, */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 Get localization keys
 
-Returns the list of values that need to be translated for the draft. Set the `Accept` header to `application/vnd.dyspatch.2020.04+json` to get a JSON object, or `text/vnd.dyspatch.2020.04+x-gettext-translation` to get the POT file.
+Returns the list of values that need to be translated for the draft. Set the `Accept` header to `application/vnd.dyspatch.2020.08+json` to get a JSON object, or `text/vnd.dyspatch.2020.08+x-gettext-translation` to get the POT file.
 
 ### Example
 
@@ -224,7 +224,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 
     try:
         # Get localization keys
@@ -239,7 +239,7 @@ accept = 'accept_example' # str | A version of the API that should be used for t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
 
 ### Return type
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2020.04+json, text/vnd.dyspatch.2020.04+x-gettext-translation
+ - **Accept**: application/vnd.dyspatch.2020.08+json, text/vnd.dyspatch.2020.08+x-gettext-translation
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -302,7 +302,7 @@ configuration = dyspatch_client.Configuration(
 with dyspatch_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dyspatch_client.DraftsApi(api_client)
-    accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+    accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 cursor = 'cursor_example' # str | A cursor value used to retrieve a specific page from a paginated result set. (optional)
 status = 'status_example' # str | Filter the list of drafts by a particular status (optional)
 
@@ -318,7 +318,7 @@ status = 'status_example' # str | Filter the list of drafts by a particular stat
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
  **cursor** | **str**| A cursor value used to retrieve a specific page from a paginated result set. | [optional] 
  **status** | **str**| Filter the list of drafts by a particular status | [optional] 
 
@@ -333,7 +333,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2020.04+json, */*
+ - **Accept**: application/vnd.dyspatch.2020.08+json, */*
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -391,7 +391,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 
     try:
         # Get localizations on a draft
@@ -406,7 +406,7 @@ accept = 'accept_example' # str | A version of the API that should be used for t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
 
 ### Return type
 
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2020.04+json
+ - **Accept**: application/vnd.dyspatch.2020.08+json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -471,7 +471,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
 language_id = 'language_id_example' # str | A language ID (eg: en-US)
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 inline_object = dyspatch_client.InlineObject() # InlineObject | 
 
     try:
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
  **language_id** | **str**| A language ID (eg: en-US) | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
  **inline_object** | [**InlineObject**](InlineObject.md)|  | 
 
 ### Return type
@@ -553,7 +553,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
 language_id = 'language_id_example' # str | A language ID (eg: en-US)
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 request_body = {'key': 'request_body_example'} # dict(str, str) | 
 
     try:
@@ -569,7 +569,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
  **language_id** | **str**| A language ID (eg: en-US) | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
  **request_body** | [**dict(str, str)**](str.md)|  | 
 
 ### Return type
@@ -635,7 +635,7 @@ with dyspatch_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dyspatch_client.DraftsApi(api_client)
     draft_id = 'draft_id_example' # str | A draft ID
-accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.04\", set the value to \"application/vnd.dyspatch.2020.04+json\"
+accept = 'accept_example' # str | A version of the API that should be used for the request. For example, to use version \"2020.08\", set the value to \"application/vnd.dyspatch.2020.08+json\"
 
     try:
         # Submit the draft for approval
@@ -649,7 +649,7 @@ accept = 'accept_example' # str | A version of the API that should be used for t
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **str**| A draft ID | 
- **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.04\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.04+json\&quot; | 
+ **accept** | **str**| A version of the API that should be used for the request. For example, to use version \&quot;2020.08\&quot;, set the value to \&quot;application/vnd.dyspatch.2020.08+json\&quot; | 
 
 ### Return type
 

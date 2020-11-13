@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **reply_to** | **str** | Reply-To address | [optional] 
 **subject** | **str** | Base64 encoded template subject line | [optional] 
 **html** | **str** | Base64 encoded template HTML body | [optional] 
+**amp_html** | **str** | Base64 encoded template AMP body | [optional] 
 **text** | **str** | Base64 encoded template text body | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

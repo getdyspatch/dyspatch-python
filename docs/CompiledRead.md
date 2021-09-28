@@ -1,6 +1,7 @@
 # CompiledRead
 
 revision data
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -10,6 +11,7 @@ Name | Type | Description | Notes
 **html** | **str** | Base64 encoded template HTML body | [optional] 
 **amp_html** | **str** | Base64 encoded template AMP body | [optional] 
 **text** | **str** | Base64 encoded template text body | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

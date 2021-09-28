@@ -94,8 +94,8 @@ class TemplatesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'template_id',
-            'target_language',
+            'template_id'
+            'target_language'
             'accept'
         ]
         all_params.extend(
@@ -224,7 +224,7 @@ class TemplatesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'accept',
+            'accept'
             'cursor'
         ]
         all_params.extend(

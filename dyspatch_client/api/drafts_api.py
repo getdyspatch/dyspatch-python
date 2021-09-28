@@ -94,8 +94,8 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
-            'language_id',
+            'draft_id'
+            'language_id'
             'accept'
         ]
         all_params.extend(
@@ -222,8 +222,8 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
-            'target_language',
+            'draft_id'
+            'target_language'
             'accept'
         ]
         all_params.extend(
@@ -316,7 +316,7 @@ class DraftsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[LocalizationKeyRead]
+        :return: [LocalizationKeyRead]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -344,7 +344,7 @@ class DraftsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[LocalizationKeyRead], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple([LocalizationKeyRead], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -352,7 +352,7 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
+            'draft_id'
             'accept'
         ]
         all_params.extend(
@@ -412,7 +412,7 @@ class DraftsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[LocalizationKeyRead]',  # noqa: E501
+            response_type='[LocalizationKeyRead]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -477,8 +477,8 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'accept',
-            'cursor',
+            'accept'
+            'cursor'
             'status'
         ]
         all_params.extend(
@@ -563,7 +563,7 @@ class DraftsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[LocalizationMetaRead]
+        :return: [LocalizationMetaRead]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -591,7 +591,7 @@ class DraftsApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[LocalizationMetaRead], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple([LocalizationMetaRead], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -599,7 +599,7 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
+            'draft_id'
             'accept'
         ]
         all_params.extend(
@@ -659,7 +659,7 @@ class DraftsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[LocalizationMetaRead]',  # noqa: E501
+            response_type='[LocalizationMetaRead]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -726,9 +726,9 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
-            'language_id',
-            'accept',
+            'draft_id'
+            'language_id'
+            'accept'
             'inline_object'
         ]
         all_params.extend(
@@ -821,7 +821,7 @@ class DraftsApi(object):
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :param str accept: A version of the API that should be used for the request. For example, to use version \"2020.11\", set the value to \"application/vnd.dyspatch.2020.11+json\" (required)
-        :param dict(str, str) request_body: (required)
+        :param {str: (str,)} request_body: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -849,7 +849,7 @@ class DraftsApi(object):
         :param str draft_id: A draft ID (required)
         :param str language_id: A language ID (eg: en-US) (required)
         :param str accept: A version of the API that should be used for the request. For example, to use version \"2020.11\", set the value to \"application/vnd.dyspatch.2020.11+json\" (required)
-        :param dict(str, str) request_body: (required)
+        :param {str: (str,)} request_body: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -867,9 +867,9 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
-            'language_id',
-            'accept',
+            'draft_id'
+            'language_id'
+            'accept'
             'request_body'
         ]
         all_params.extend(
@@ -1008,7 +1008,7 @@ class DraftsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
+            'draft_id'
             'accept'
         ]
         all_params.extend(

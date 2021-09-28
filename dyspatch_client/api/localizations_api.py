@@ -96,9 +96,9 @@ class LocalizationsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'draft_id',
-            'localization_id',
-            'target_language',
+            'draft_id'
+            'localization_id'
+            'target_language'
             'accept'
         ]
         all_params.extend(
@@ -235,8 +235,8 @@ class LocalizationsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'localization_id',
-            'target_language',
+            'localization_id'
+            'target_language'
             'accept'
         ]
         all_params.extend(

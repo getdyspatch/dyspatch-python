@@ -1,8 +1,3 @@
-from __future__ import absolute_import
-
-# flake8: noqa
-
-# import apis into api package
-from dyspatch_client.api.drafts_api import DraftsApi
-from dyspatch_client.api.localizations_api import LocalizationsApi
-from dyspatch_client.api.templates_api import TemplatesApi
+# do not import all apis into this module because that uses a lot of memory and stack frames
+# if you need the ability to import all apis from one package, import them with
+# from dyspatch_client.apis import DraftsApi

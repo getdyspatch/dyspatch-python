@@ -1,5 +1,3 @@
-# coding: utf-8
-
 """
     Dyspatch API
 
@@ -11,20 +9,17 @@
 """
 
 
-from __future__ import absolute_import
-
 import unittest
 
 import dyspatch_client
 from dyspatch_client.api.drafts_api import DraftsApi  # noqa: E501
-from dyspatch_client.rest import ApiException
 
 
 class TestDraftsApi(unittest.TestCase):
     """DraftsApi unit test stubs"""
 
     def setUp(self):
-        self.api = dyspatch_client.api.drafts_api.DraftsApi()  # noqa: E501
+        self.api = DraftsApi()  # noqa: E501
 
     def tearDown(self):
         pass
